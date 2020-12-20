@@ -19,7 +19,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 USER root
 
-# ---- Miniforge installer ----
+# ---- Miniforge installer -----
 # Default values can be overridden at build time
 # (ARGS are in lower case to distinguish them from ENV)
 # Check https://github.com/conda-forge/miniforge/releases
