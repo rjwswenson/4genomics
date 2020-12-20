@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --build-arg PYTHON_VERSION=3.7 --tag hailbase:initial --file Dockerfile 
+      run: docker build . --build-arg PYTHON_VERSION=3.7 --tag hailbase:initial --file Dockerfile
+    - name: Perform DH Login
+      run: docker login -u ${{ secrets.USER }} -p ${{ secrets.PASSWORD }}
+    - name: Push New Image
+      run: docker push rjbenikar/hailbase:initial
